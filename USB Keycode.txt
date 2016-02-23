@@ -1,4 +1,4 @@
-// Values for usbHidKeyboardInput keyCodes
+// Values for HID keyCodes
 #define KEY_NONE               0x00
 #define KEY_A                  0x04
 #define KEY_B                  0x05
@@ -111,4 +111,3 @@
 #define KEY_SHIFT_RIGHT        0xE5
 #define KEY_ALT_RIGHT          0xE6
 #define KEY_GUI_RIGHT          0xE7
-
