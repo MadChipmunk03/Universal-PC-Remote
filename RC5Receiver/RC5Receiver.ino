@@ -26,9 +26,9 @@ void loop() {
   unsigned char address = 0x00;
   unsigned char command = 0x00;
   unsigned char count=0x00;
-  UsbKeyboard.update();                 //Needs to be called often
+  UsbKeyboard.update();                 //Keyboard should be updated often
   while(digitalRead(IR_PIN)==HIGH){	//Wait for first bit 
-    UsbKeyboard.update();               //Needs to be called often
+    UsbKeyboard.update();               //Keyboard should be updated often
   }
   delayMicroseconds(3112);              //Delay for 3112ums
   flipBit=digitalRead(IR_PIN);	        //Reading flip bit
@@ -44,7 +44,7 @@ void loop() {
     if(digitalRead(IR_PIN)==1)
       command = command | 0x01;
   }
-  UsbKeyboard.update();               //Needs to be called often
+  UsbKeyboard.update();               //Keyboard should be updated often
   if(address == 0x00){                //Cheking for valid device address
     if(previousFlipBit != flipBit){
       previousFlipBit = flipBit;
